@@ -1,20 +1,28 @@
 <template>
   <div class="hello">
     <div class="menu">
-      <div class="menu-item menu-text">
-        Resume
+      <div class="menu-item">
+        <div class="menu-text">
+          Resume
+        </div>
       </div>
-      <div class="menu-item menu-text">
-        Projects
+      <div class="menu-item">
+        <div class="menu-text">
+          Projects
+        </div>
       </div>
       <div class="menu-item menu-center">
         Loveish Sarolia
       </div>
-      <div class="menu-item menu-text">
-        Photography
+      <div class="menu-item">
+        <div class="menu-text">
+          Photography
+        </div>
       </div>
-      <div class="menu-item menu-text">
-        About
+      <div class="menu-item">
+        <div class="menu-text">
+          About
+        </div>
       </div>
     </div>
     <div class="name">
@@ -35,18 +43,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .name {
-  display: flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
   width: 100vw;
-  height: 100vh;
-  margin: 0.8% 
+  height: calc(100vh - 60px);
+  margin: 0.8%;
+  /* filter: drop-shadow(0px 0px 7px rgba(150, 150, 150, 0.7)); */
 }
 
 .lettersize {
   width: 90%;
-  vertical-align: top;
+  padding: 0px
 }
 
 .menu {
@@ -58,8 +66,9 @@ export default {
 .menu-item {
   flex: 1;
   text-align: center;
-  font-size: 20px;
-  color: #707070
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-text {
@@ -67,16 +76,18 @@ export default {
   color: #818181;
   cursor: pointer;
   padding: 10px;
-  border-bottom: 2px solid #707070;
   width: fit-content;
 }
 
 .menu-text:hover {
+  color: #ffffff;
   border-bottom: 2px solid #ffffff;
 }
 
 .menu-center {
   font-size: 30px;
-  color: #EAEAEA;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
 }
 </style>
